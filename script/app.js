@@ -4,7 +4,6 @@ import path from 'path';
 import cookieParser from 'cookie-parser';
 import logger from 'morgan';
 import indexRouter from './routes/index';
-import usersRouter from './routes/users';
 import JWTMiddleware from './middlewares/JWT';
 import cors from 'cors';
 
@@ -34,7 +33,6 @@ class App extends Express {
   ]
 
   routesApi = [
-    { prefix: '/users', route: usersRouter }
   ]
 
   init = () => {
